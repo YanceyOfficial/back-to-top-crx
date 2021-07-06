@@ -1,0 +1,41 @@
+{
+    "manifest_version": 3,
+    "name": "back-to-top",
+    "version": "1.0",
+    "description": "A back-to-top tools for Chrome Extensions.",
+    "action": {
+        "default_icon": {
+            "16": "public/icons/16-up.png",
+            "24": "public/icons/32-up.png",
+            "32": "public/icons/32-up.png"
+        },
+        "default_title": "Click Me",
+        "default_popup": "popup.html"
+    },
+    "author": "Yancey Leo",
+    "icons": {
+        "16": "public/icons/16-up.png",
+        "48": "public/icons/48-up.png",
+        "128": "public/icons/128-up.png"
+    },
+    "homepage_url": "https://www.yanceyleo.com",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "contextMenus"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": [
+                "public/css/style.css"
+            ]
+        }
+    ]
+}
