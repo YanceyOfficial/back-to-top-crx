@@ -35,6 +35,9 @@
             ],
             "css": [
                 "public/css/style.css"
+            ],
+            "js": [
+                "content.js"
             ]
         }
     ]

@@ -1,5 +1,10 @@
 chrome.runtime.onInstalled.addListener(() => {
-  // TODO:
-  // 1. Check allow list.
-  // 2. show button.
+  let res = null
+  chrome.storage.sync.get(['alloweds'], ({ alloweds }) => {
+    res = alloweds
+  })
+
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    sendResponse(res)
+  })
 })
