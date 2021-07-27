@@ -40,9 +40,9 @@ const initialBackToTopBtn = () => {
   })
 }
 
-const needShowBtn = (alloweds) => {
+const needShowBtn = (allowList) => {
   const url = window.location.href
-  const needShow = alloweds.some((rule) => {
+  const needShow = allowList.some((rule) => {
     if (/^\*\./.test(rule)) {
       return url.includes(rule.replace('*.', ''))
     }

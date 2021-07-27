@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "back-to-top",
+    "name": "Back To Top",
     "version": "1.0",
     "description": "A back-to-top tools for Chrome Extensions.",
     "action": {
